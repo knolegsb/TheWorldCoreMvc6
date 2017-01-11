@@ -16,6 +16,7 @@ namespace TheWorldCoreMvc6.Controllers.Web
 
         public IActionResult Contact()
         {
+            throw new InvalidOperationException("Bad things happen to good developers");
             return View();
         }
 

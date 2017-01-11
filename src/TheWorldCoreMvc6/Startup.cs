@@ -26,30 +26,33 @@ namespace TheWorldCoreMvc6
         {
             //loggerFactory.AddConsole();
 
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //}
+//if (env.IsDevelopment())
+//{
+//    app.UseDeveloperExceptionPage();
+//}
 
-            //app.Run(async (context) =>
-            //{
-            //    await context.Response.WriteAsync("Hello World!");
-            //});
+//app.Run(async (context) =>
+//{
+//    await context.Response.WriteAsync("Hello World!");
+//});
 
-            //loggerFactory.AddConsole(IConfiguration.GetSection("Logging"));
-            //loggerFactory.AddDebug();
+//loggerFactory.AddConsole(IConfiguration.GetSection("Logging"));
+//loggerFactory.AddDebug();
 
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //    app.UseDatabaseErrorPage();
-            //    app.UseBrowserLink();
-            //}
-            //else
-            //{
-            //    app.UseExceptionHandler("/Home/Error");
-            //}
+//if (env.IsDevelopment())
+//{
+//    app.UseDeveloperExceptionPage();
+//    app.UseDatabaseErrorPage();
+//    app.UseBrowserLink();
+//}
+//else
+//{
+//    app.UseExceptionHandler("/Home/Error");
+//}
 
+#if DEBUG
+            app.UseDeveloperExceptionPage();
+#endif
             app.UseStaticFiles();
 
             app.UseMvc(config =>
